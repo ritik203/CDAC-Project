@@ -1,0 +1,9 @@
+{
+    "server": "localhost",
+    "port": 3306,
+    "username": "root",
+    "password": "1234",
+    "dbname": "moviedb",
+    "httpport": 7777,
+    "jwtkey": "mmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmm"
+}
