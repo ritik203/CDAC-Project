@@ -1,5 +1,5 @@
 const express =require("express");
-const connection=require("../connection");
+const connection=require('../DBUtils/connections');
 
 const app=express.Router();
 

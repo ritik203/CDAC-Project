@@ -1,6 +1,5 @@
-const express=reuire('express');
-const { response } = require('express');
-const connection=require('../connection');
+const express=require('express');
+const connection=require('../DBUtils/connections');
 const app=express.Router();
 
 app.post("/login",(req,res)=>{
