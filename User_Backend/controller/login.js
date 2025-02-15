@@ -60,3 +60,27 @@ app.post("/register",(req,res)=>{
         });  
     });
 });
+
+app.put("/:id",(req,res)=>{
+    const userId=request.params.id;
+    const {name,email,mobile,password}=req.body;
+    const query=` Update user
+    SET name=?,email=?,mobile=?,password=?
+    Where user_id=?`;
+   
+    connection.query(query,[name,email,mobile,password,userID],(error,result)=>{
+        response.setHeader('Content-Type','application/json');
+        if(error){
+            console.log("error updating user",error);
+            res.write(error);
+            res.end();
+
+        }else{
+            res.write(JSON.stringify(result ));
+            res.end();
+        }
+    });
+
+});
+
+module.exports=app;
