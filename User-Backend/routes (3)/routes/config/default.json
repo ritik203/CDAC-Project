@@ -1,0 +1,9 @@
+{
+    "server": "localhost",
+    "port": 3306,
+    "username": "W3_86897_Ritik",
+    "password": "manager",
+    "dbname": "moviedb",
+    "httpport": 4545,
+    "jwtkey": "mmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmm"
+}
