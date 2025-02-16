@@ -1,12 +1,12 @@
 const express=require('express');
 const cors=require('cors');
-const config=require('./User_Backend/DBUtils/constants.json');
+const config=require('./DBUtils/constants.json');
 
-const loginApp=require('./User_Backend/controller/login');
-const citiesApp=require('./User_Backend/controller/cities');
-const bookingApp=require('./User_Backend/controller/booking');
+const loginApp=require('./controller/login');
+const citiesApp=require('./controller/cities');
+const bookingApp=require('./controller/booking');
 const movieApp=require('./User_Backend/controller/movies');
-const theatreApp=require('./User_Backend/controller/theatre');
+const theatreApp=require('./controller/theatre');
 
 const app =express();
 
