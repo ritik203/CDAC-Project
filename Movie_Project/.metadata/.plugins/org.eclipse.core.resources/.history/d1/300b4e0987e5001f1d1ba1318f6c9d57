@@ -1,0 +1,5 @@
+package com.sunbeam.admin.entities;
+
+public class Location {
+
+}
