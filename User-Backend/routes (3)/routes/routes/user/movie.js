@@ -26,6 +26,7 @@ app.get("/theatre/:id", (request, response) => {
 
     connection.query(query, [id], (error, result) => {
         response.setHeader("Content-Type", "application/json");
+        console.log(result);
         if (error) {
             console.log(error);
             response.status(500).json({ status: "error", data: "Could not get theatres" });
