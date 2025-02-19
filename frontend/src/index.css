@@ -1,0 +1,58 @@
+@import "tailwindcss";
+
+
+
+.img-will-change-transform {
+    @apply will-change-transform;
+}
+
+.slider-container {
+  width: 100%;
+  max-width: 1200px;
+  margin: auto;
+  padding: 20px 0;
+  overflow: hidden;
+}
+
+  
+@layer components {
+  
+    /* https://dev.to/afif/i-made-100-css-loaders-for-your-next-project-4eje */
+  .loader {
+    width: 45px;
+    aspect-ratio: 0.75;
+    --c: no-repeat linear-gradient(theme(colors.stone.800) 0 0);
+    background: var(--c) 0% 50%, var(--c) 50% 50%, var(--c) 100% 50%;
+    background-size: 20% 50%;
+    animation: loading 1s infinite linear;
+  }
+
+  @keyframes loading {
+    20% {
+      background-position: 0% 0%, 50% 50%, 100% 50%;
+    }
+    40% {
+      background-position: 0% 100%, 50% 0%, 100% 50%;
+    }
+    60% {
+      background-position: 0% 50%, 50% 100%, 100% 0%;
+    }
+    80% {
+      background-position: 0% 50%, 50% 50%, 100% 100%;
+    }
+  }
+}
+
+.slick-prev, .slick-next {
+  display: block !important;  /* Ensure arrows are always visible */
+  z-index: 10;                /* Prevent them from being hidden under other elements */
+  opacity: 1;                 /* Ensure full visibility */
+}
+
+.slick-prev {
+  left: -40px;  /* Adjust position to make it visible */
+}
+
+.slick-next {
+  right: -40px; /* Adjust position */
+}
